@@ -7,17 +7,17 @@
 /* Import the fonts from assets folder */
 @font-face {
   font-family: "Ahsing";
-  src: url(assets/fonts/Ahsing-Regular.otf);
+  src: url(Home/assets/fonts/Ahsing-Regular.otf);
 }
 
 @font-face {
   font-family: "Anton";
-  src: url(assets/fonts/Anton-Regular.ttf);
+  src: url(Home/assets/fonts/Anton-Regular.ttf);
 }
 
 @font-face {
   font-family: "Noto Sans";
-  src: url(assets/fonts/NotoSansMandaic-Regular.ttf);
+  src: url(Home/assets/fonts/NotoSansMandaic-Regular.ttf);
 }
 
 /* Sets the colors */
