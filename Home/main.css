@@ -1,0 +1,286 @@
+/* Rutherford Labbe: 11-11-2023 */
+/* Update: 11-15-2023 */
+
+/* Import the fonts from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
+
+/* Import the fonts from assets folder */
+@font-face {
+  font-family: "Ahsing";
+  src: url(assets/fonts/Ahsing-Regular.otf);
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url(assets/fonts/Anton-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url(assets/fonts/NotoSansMandaic-Regular.ttf);
+}
+
+/* Sets the colors */
+:root {
+  --Westar: #e4e2dd;
+  --Shark: #1b2123;
+}
+
+/* Affects the entire page */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Hides any overflow for the x and y axes */
+html {
+  overflow: hidden;
+}
+
+/* Adds background image */
+body {
+  background-color: var(--Shark);
+}
+
+#myVideo {
+  /* Fits parent element */
+  width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#fade_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transition: opacity 1s;
+  background-color: var(--Shark);
+  outline: 7px solid var(--Westar);
+  border-radius: 8px;
+}
+
+.home,
+.profile {
+  /* Moves button up */
+  position: absolute;
+  bottom: 30px;
+
+  /* Sets width dimension */
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  /* Allows the button to be clicked */
+  z-index: 1;
+}
+
+#button,
+#button02 {
+  border: none;
+  color: white;
+  font-size: larger;
+  padding: 5px 30px;
+
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  background-color: #f1a661;
+  outline: 4px solid white;
+
+  animation-name: buttonFadesIn;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+
+  visibility: hidden;
+}
+
+#button02 {
+  letter-spacing: 1px;
+  background-color: #f1a761cf;
+  visibility: visible;
+}
+
+/* The animation code */
+@keyframes buttonFadesIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#button:hover,
+#button02:hover {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+/* Sets image dimensions */
+.responsive_image {
+  /* Centers element horizontally and vertically */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.mid_section_wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 45%;
+
+  /* Layer ontop of background */
+  z-index: 1;
+  background-color: #24242669;
+}
+
+.mid_section_grid {
+  /* 1 column - 2 rows */
+  display: flex;
+  flex-direction: row;
+
+  /* Centers element */
+  margin: auto;
+
+  /* Sets dimensions */
+  width: 80%;
+  height: 100%;
+}
+
+.mid_section_item_one {
+  /* Sets dimensions */
+  width: 100%;
+  height: 100%;
+}
+
+.mid_section_item_two {
+  /* Sets dimensions */
+  width: 120%;
+  height: 100%;
+
+  background-color: #1b2123;
+}
+
+.text {
+  color: var(--Westar);
+  margin-top: 22px;
+}
+
+.text h1 {
+  font-size: 5vw;
+}
+
+.text p {
+  font-size: 1.5vw;
+  font-family: "Noto Sans";
+}
+
+.text .one {
+  font-family: "Anton";
+}
+
+.text .two {
+  font-family: "Ahsing";
+  margin-bottom: 12px;
+}
+
+.artwork {
+  /* Sets dimensions */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* Centers button */
+  display: flex;
+  justify-content: center;
+}
+
+#myVideo02 {
+  /* Fits parent element */
+  width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
+  object-fit: cover;
+
+  /* Layer ontop of background */
+  z-index: 1;
+}
+
+/* Holds the contents of the page */
+.content_container {
+  /* Centers element vertically and horizontally */
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Sets dimensions */
+  width: 92%;
+  height: 87%;
+}
+
+/* Shrinks element */
+#section_box {
+  /* Centers element vertically and horizontally */
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Sets dimensions */
+  width: 90.1%;
+  height: 97%;
+
+  margin: 10px auto 30px;
+}
+
+/* ------------------------------------------ Media Queries -------------------------------------------- */
+
+/* Media queries for responsive design */
+@media screen and (min-width: 360px) {
+  .mid_section_item_one {
+    display: none;
+  }
+
+  .artwork {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mid_section_wrapper {
+    display: contents;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mid_section_item_one {
+    display: block;
+  }
+
+  #button02 {
+    visibility: visible;
+  }
+
+  .mid_section_wrapper {
+    display: block;
+  }
+}

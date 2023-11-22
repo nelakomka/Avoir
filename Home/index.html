@@ -1,0 +1,72 @@
+<!-- Rutherford Labbe: 11-11-2023 -->
+<!--/* Update: 11-15-2023 */-->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/9415abd106.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Avoir - Home Page</title>
+  </head>
+  <body>
+    <main>
+      <div class="content_container">
+        <div id="section_box">
+          <!--Background video-->
+          <video id="myVideo" muted>
+            <source src="assets/videos/Artist.mp4" type="video/mp4" />
+          </video>
+          <div class="home">
+            <button id="button" type="button" onclick="skipVideo()">
+              Home
+            </button>
+          </div>
+          <div id="fade_overlay">
+            <div class="mid_section_wrapper">
+              <div class="mid_section_grid">
+                <div class="mid_section_item_one">
+                  <div class="text">
+                    <h1 class="one">
+                      <em> Ready to </em>
+                    </h1>
+                    <h1 class="two">Serve</h1>
+                    <p>
+                      Have a piece of our most <br />
+                      delectable works.
+                    </p>
+                  </div>
+                </div>
+                <div class="mid_section_item_two">
+                  <div class="artwork">
+                    <video id="myVideo02" muted loop>
+                      <source
+                        src="assets/videos/Artist02.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div class="profile">
+                      <button id="button02" type="button">
+                        <a href="../Login/index.html">Explore</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="responsive_image"
+              src="assets/images/Background.svg"
+              alt="Grainy Background"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="assets/javascripts/script.js"></script>
+  </body>
+</html>

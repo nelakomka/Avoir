@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="loginStyles.css" />
+    <title>Avoir - Login</title>
+  </head>
+  <body>
+    <img src="../images/avoirLogo.png" alt="grpahics that spell avoirLogin" />
+    <form action="post.php" method="post" name="avoirLogin">
+      <div class="form">
+        <!--form-->
+        <p>Let's get you back in</p>
+        <ul>
+          <!--fields for the username and password-->
+          <li><label for="firstName">Username : </label></li>
+          <li>
+            <input id="firstName" type="text" name="firstName" value="" />
+          </li>
+
+          <li><label for="lastName">Password : </label></li>
+          <li>
+            <input id="lastName" type="password" name="lastName" value="" />
+          </li>
+          <!--password type was used so that the user could type the password without it being seen-->
+        </ul>
+        <div id="login"><a href="../Profile/index.html">Log in</a></div>
+        <div id="forgot"><a href="home.html">Forgot password</a></div>
+      </div>
+      <!--link for signup-->
+      <div id="signup">
+        <a href="home.html">Don't have an account? Sign up!</a>
+      </div>
+    </form>
+  </body>
+</html>
